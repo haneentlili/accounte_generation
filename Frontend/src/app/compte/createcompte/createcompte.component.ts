@@ -15,7 +15,7 @@ export class CreatecompteComponent implements OnInit {
       codeClient:new FormControl(null,Validators.required),
       nomClient: new FormControl(null,Validators.required)
     }),
-    solde: new FormControl(null, [Validators.email, Validators.required]),
+    solde: new FormControl(null, Validators.required),
     decouvert: new FormControl(null, Validators.required),
     
   });
