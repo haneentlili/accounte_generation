@@ -10,6 +10,8 @@ import { AddclientComponent } from './client/addclient/addclient.component';
 import { ClientService } from './services/client.service';
 import { GetcompteComponent } from './compte/getcompte/getcompte.component';
 import { GetclientsComponent } from './client/getclients/getclients.component';
+import { OperationService } from './services/operation.service';
+import { VersementComponent } from './versement/versement.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { GetclientsComponent } from './client/getclients/getclients.component';
     CreatecompteComponent,
     AddclientComponent,
     GetcompteComponent,
-    GetclientsComponent
+    GetclientsComponent,
+    VersementComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { GetclientsComponent } from './client/getclients/getclients.component';
   ],
   providers: [
     CompteService,
-    ClientService],
+    ClientService,OperationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

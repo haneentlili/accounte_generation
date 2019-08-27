@@ -1,0 +1,32 @@
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+  <div>
+    
+    
+    <h3></h3>
+    <p>creation versement</p>
+    
+
+    <form class="m-t" role="form" [formGroup]="VersementForm">
+       
+     
+
+
+
+      <div class="form-group">
+        <input type="number" class="form-control" name="code" formControlName="code" placeholder="entrer le code"
+          required="">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" name="montant" formControlName="montant" placeholder="entrer le montant"
+          required="">
+      </div>
+     
+      <button type="submit" (click)="verser()" class="btn btn-primary block full-width m-b">Verser</button>
+
+      
+    </form>
+    <br>
+    
+    <p class="m-t"> <small>Account Generation</small> </p>
+  </div>
+</div>
