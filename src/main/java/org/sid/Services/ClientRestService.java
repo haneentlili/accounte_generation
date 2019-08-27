@@ -13,20 +13,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 public class ClientRestService {
-	@Autowired
+@Autowired
 private ClientController clientController;
 	
 @RequestMapping(value="/clients",method=RequestMethod.POST)
-@ResponseBody	
+@ResponseBody
+@CrossOrigin	
 public Client saveClient(@RequestBody Client c) {
 	System.out.println(c.toString());
 		return clientController.saveClient(c);
 	}
 
 @RequestMapping(value="/clients",method=RequestMethod.GET)
+@CrossOrigin
 	public Collection<Client> listClient() {
 		return clientController.listClient();
 	}

@@ -22,6 +22,7 @@ CompteController compteController;
 		return compteController.saveCompte(cp);
 	}
 	@RequestMapping(value="/comptefind/{code}",method=RequestMethod.GET)
+	@CrossOrigin
 	public Compte getCompte(@PathVariable long code) {
 		return compteController.getCompte(code);
 	}

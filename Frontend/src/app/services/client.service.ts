@@ -4,22 +4,22 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CompteService {
+export class ClientService {
 
   constructor(private _http: HttpClient) { }
-  createcompte(body: any) {
-    return this._http.post('http://localhost:8080/comptesave', body, {
+  addclient(body: any) {
+    return this._http.post('http://localhost:8080/clients', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
 
     });
 
   }
-  getcompte(id:string) {
-    console.log(id);
-    return  this._http.get(`http://localhost:8080/comptefind/${id}`, {
+  getclients() {
+    return  this._http.get('http://localhost:8080/clients', {
+      observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application json')
     });
+  
   }
-  }
-
+}

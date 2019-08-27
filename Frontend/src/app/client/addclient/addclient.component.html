@@ -1,0 +1,29 @@
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+  <div>
+    
+    
+    <h3></h3>
+    <p>Ajouter un client</p>
+    
+
+    <form class="m-t" role="form" [formGroup]="clientForm">
+       
+     
+
+
+
+      <div class="form-group">
+        <input type="text" class="form-control" name="nom du client" formControlName="nomClient" placeholder="Entrer le nom du client"
+          required="">
+      </div>
+     
+     
+      <button type="submit" (click)="register()" class="btn btn-primary block full-width m-b">ajouter un client</button>
+
+      
+    </form>
+    <br>
+    
+    <p class="m-t"> <small>Account Generation</small> </p>
+  </div>
+</div>
